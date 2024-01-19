@@ -8,7 +8,16 @@
   "editor.fontFamily": "GeistMono Nerd Font",
   "editor.fontLigatures": "'ss09'",
 
+  // apc
+  "apc.font.family": "Geist",
+
   // formatting + linting
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
@@ -16,22 +25,27 @@
     "source.fixAll.eslint": "explicit",
     "source.sortImports": "explicit"
   },
-
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "prettier.semi": true,
   "prettier.endOfLine": "auto",
   "prettier.printWidth": 80,
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "none",
-  "eslint.validate": ["javascript", "typescript"],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
 
   // ui
   "window.commandCenter": false,
-  "window.density.editorTabHeight": "compact",
-  "workbench.layoutControl.enabled": false,
+  "workbench.editor.labelFormat": "short",
   "workbench.tree.enableStickyScroll": true,
-  "workbench.activityBar.location": "top",
   "workbench.startupEditor": "none",
   "files.exclude": {
     "**/.git": true,
@@ -60,6 +74,7 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.quickSuggestionsDelay": 0,
+  "editor.scrollbar.vertical": "hidden",
 
   // terminal
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -87,5 +102,8 @@
   // For those using file-nesting, nest the new files. E.g.:
   "explorer.fileNesting.patterns": {
     "package.json": "pnpm-workspace.yaml, pnpm-lock.yaml"
-  }
+  },
+  "workbench.layoutControl.enabled": false,
+  "window.density.editorTabHeight": "compact",
+  "workbench.activityBar.location": "top"
 }
