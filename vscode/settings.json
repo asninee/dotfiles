@@ -1,0 +1,91 @@
+{
+  // themes
+  "workbench.iconTheme": "chalice-icon-theme",
+  "workbench.colorTheme": "Vesper",
+  "workbench.productIconTheme": "icons-carbon",
+
+  // fonts
+  "editor.fontFamily": "GeistMono Nerd Font",
+  "editor.fontLigatures": "'ss09'",
+
+  // formatting + linting
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.sortImports": "explicit"
+  },
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.semi": true,
+  "prettier.endOfLine": "auto",
+  "prettier.printWidth": 80,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "eslint.validate": ["javascript", "typescript"],
+
+  // ui
+  "window.commandCenter": false,
+  "window.density.editorTabHeight": "compact",
+  "workbench.layoutControl.enabled": false,
+  "workbench.tree.enableStickyScroll": true,
+  "workbench.activityBar.location": "top",
+  "workbench.startupEditor": "none",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "pnpm-lock.yaml": true
+  },
+
+  // editor
+  "editor.accessibilitySupport": "off",
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.autohide": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.inlineSuggest.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.quickSuggestionsDelay": 0,
+
+  // terminal
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.env.osx": {},
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.shellIntegration.enabled": false,
+
+  // git
+  "git.openRepositoryInParentFolders": "never",
+  "git.autofetch": true,
+
+  // extensions
+  "livePreview.notifyOnOpenLooseFile": false,
+  "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+    "live-preview-extension": true
+  },
+  "aws.suppressPrompts": {
+    "codeWhispererNewWelcomeMessage": true
+  },
+  "console-ninja.featureSet": "Community",
+  "symbols.hidesExplorerArrows": false,
+
+  // npm
+  "npm.packageManager": "pnpm",
+  // For those using file-nesting, nest the new files. E.g.:
+  "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-workspace.yaml, pnpm-lock.yaml"
+  }
+}
