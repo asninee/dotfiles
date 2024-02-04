@@ -1,8 +1,8 @@
 {
   // themes
   "workbench.iconTheme": "chalice-icon-theme",
-  "workbench.colorTheme": "Vesper",
   "workbench.productIconTheme": "icons-carbon",
+  "workbench.colorTheme": "Vesper",
 
   // fonts
   "editor.fontFamily": "GeistMono Nerd Font",
@@ -25,17 +25,24 @@
     "source.fixAll.eslint": "explicit",
     "source.sortImports": "explicit"
   },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "prettier.semi": true,
+  "prettier.semi": false,
   "prettier.endOfLine": "auto",
   "prettier.printWidth": 80,
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
-  "prettier.trailingComma": "none",
+  "prettier.trailingComma": "es5",
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".mdx", ".ts", ".tsx"]
+  },
   "eslint.validate": [
+    "mdx",
     "javascript",
     "typescript",
     "javascriptreact",
@@ -43,10 +50,15 @@
   ],
 
   // ui
+  "breadcrumbs.enabled": false,
   "window.commandCenter": false,
-  "workbench.editor.labelFormat": "short",
+  "window.density.editorTabHeight": "compact",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.tabActionCloseVisibility": false,
   "workbench.tree.enableStickyScroll": true,
   "workbench.startupEditor": "none",
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "top",
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -61,20 +73,33 @@
     "**/*.code-search": true,
     "pnpm-lock.yaml": true
   },
+  "files.associations": {
+    "*.css": "tailwindcss",
+    ".env*": "dotenv"
+  },
 
   // editor
+  "editor.stickyScroll.enabled": true,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "all",
+  "editor.padding.bottom": 14,
+  "editor.padding.top": 14,
   "editor.accessibilitySupport": "off",
   "editor.guides.bracketPairs": "active",
   "editor.minimap.autohide": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
+  "editor.smoothScrolling": true,
   "editor.inlineSuggest.enabled": true,
   "editor.linkedEditing": true,
   "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.quickSuggestionsDelay": 0,
   "editor.scrollbar.vertical": "hidden",
+  "editor.hideCursorInOverviewRuler": true,
+  "security.workspace.trust.untrustedFiles": "open",
 
   // terminal
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -83,27 +108,47 @@
   "terminal.integrated.shellIntegration.enabled": false,
 
   // git
-  "git.openRepositoryInParentFolders": "never",
+  "git.openRepositoryInParentFolders": "always",
   "git.autofetch": true,
+  "git.confirmNoVerifyCommit": false,
+  "git.confirmSync": false,
 
   // extensions
-  "livePreview.notifyOnOpenLooseFile": false,
   "console-ninja.toolsToEnableSupportAutomaticallyFor": {
     "live-preview-extension": true
   },
-  "aws.suppressPrompts": {
-    "codeWhispererNewWelcomeMessage": true
-  },
   "console-ninja.featureSet": "Community",
-  "symbols.hidesExplorerArrows": false,
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": []
+  },
+  "dotenv.enableAutocloaking": false,
+  "gitlens.codeLens.scopes": ["document", "containers"],
+  "console-ninja.showWhatsNew": false,
+  "quokka.showStartViewOnFeatureRelease": false,
 
   // npm
-  "npm.packageManager": "pnpm",
-  // For those using file-nesting, nest the new files. E.g.:
-  "explorer.fileNesting.patterns": {
-    "package.json": "pnpm-workspace.yaml, pnpm-lock.yaml"
-  },
-  "workbench.layoutControl.enabled": false,
-  "window.density.editorTabHeight": "compact",
-  "workbench.activityBar.location": "top"
+  "npm.packageManager": "auto",
+
+  // misc
+  "update.mode": "manual"
 }
