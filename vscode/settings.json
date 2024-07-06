@@ -1,25 +1,34 @@
 {
   // themes
+  "workbench.colorTheme": "Vesper",
   "workbench.iconTheme": "chalice-icon-theme",
   "workbench.productIconTheme": "icons-carbon",
-  "workbench.colorTheme": "Vesper",
 
   // fonts
-  "editor.fontFamily": "GeistMono Nerd Font",
-  "editor.fontLigatures": "'ss09'",
-
-  // apc
-  "apc.font.family": "Geist",
+  "editor.fontFamily": "Iosevka Fixed SS18",
+  "editor.fontLigatures": true,
+  "window.zoomLevel": -1.2,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontFamily": "Iosevka Term SS18",
+  "terminal.integrated.fontSize": 14,
 
   // formatting + linting
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "astro": "html",
+    "postcss": "css"
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit",
     "source.fixAll.eslint": "explicit",
@@ -30,6 +39,8 @@
   },
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
+  "javascript.suggest.paths": false,
+  "typescript.suggest.paths": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "prettier.semi": false,
@@ -38,11 +49,14 @@
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
+  "prettier.arrowParens": "avoid",
   "eslint.options": {
-    "extensions": [".js", ".jsx", ".mdx", ".ts", ".tsx"]
+    "extensions": [".js", ".jsx", ".mdx", ".ts", ".tsx", ".astro"]
   },
   "eslint.validate": [
+    "html",
     "mdx",
+    "astro",
     "javascript",
     "typescript",
     "javascriptreact",
@@ -53,19 +67,23 @@
   "breadcrumbs.enabled": false,
   "window.commandCenter": false,
   "window.density.editorTabHeight": "compact",
-  "workbench.editor.editorActionsLocation": "hidden",
   "workbench.editor.tabActionCloseVisibility": false,
   "workbench.tree.enableStickyScroll": true,
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.activityBar.location": "top",
+
+  // excluded files
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true
+    "**/Thumbs.db": true,
+    "**/.vscode": true,
+    "**/pnpm-lock.yaml": true,
+    "**/bun.lockb": true
   },
   "search.exclude": {
     "**/node_modules": true,
@@ -73,6 +91,8 @@
     "**/*.code-search": true,
     "pnpm-lock.yaml": true
   },
+
+  // file associations
   "files.associations": {
     "*.css": "tailwindcss",
     ".env*": "dotenv"
@@ -85,7 +105,8 @@
   "editor.padding.bottom": 14,
   "editor.padding.top": 14,
   "editor.accessibilitySupport": "off",
-  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
   "editor.minimap.autohide": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
@@ -118,37 +139,11 @@
     "live-preview-extension": true
   },
   "console-ninja.featureSet": "Community",
-  "editor.tokenColorCustomizations": {
-    "[*Light*]": {
-      "textMateRules": [
-        {
-          "scope": "ref.matchtext",
-          "settings": {
-            "foreground": "#000"
-          }
-        }
-      ]
-    },
-    "[*Dark*]": {
-      "textMateRules": [
-        {
-          "scope": "ref.matchtext",
-          "settings": {
-            "foreground": "#fff"
-          }
-        }
-      ]
-    },
-    "textMateRules": []
-  },
   "dotenv.enableAutocloaking": false,
   "gitlens.codeLens.scopes": ["document", "containers"],
   "console-ninja.showWhatsNew": false,
   "quokka.showStartViewOnFeatureRelease": false,
 
   // npm
-  "npm.packageManager": "auto",
-
-  // misc
-  "update.mode": "manual"
+  "npm.packageManager": "auto"
 }
