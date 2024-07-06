@@ -1,3 +1,3 @@
-# config
+# dotfiles
 
-where I store all my config files :)
+where I store all my dotfiles :)
