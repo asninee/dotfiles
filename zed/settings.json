@@ -1,22 +1,21 @@
 {
-  "features": {
-    "copilot": false
-  },
   "base_keymap": "VSCode",
   "theme": "Vesper",
   // fonts
-  "ui_font_family": "Switzer",
+  "ui_font_family": "Helvetica Neue",
   "ui_font_size": 14,
-  "buffer_font_family": "CommitMono Nerd Font",
+  "buffer_font_family": "Iosevka Term SS18",
   "buffer_font_size": 12,
   "buffer_line_height": {
     "custom": 1.5
   },
   "buffer_font_features": {
-    "ss09": true
+    "ss01": true
   },
   // ui
-  "show_whitespaces": "all",
+  "features": {
+    "copilot": false
+  },
   "toolbar": {
     "quick_actions": false
   },
@@ -33,6 +32,7 @@
     "button": false
   },
   "assistant": {
+    "version": "1",
     "button": false
   },
   "tabs": {
@@ -51,8 +51,16 @@
   // formatting
   "tab_size": 2,
   "prettier": {
-    "trailingComma": "es5",
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
     "semi": false,
-    "singleQuote": false
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "proseWrap": "preserve",
+    "endOfLine": "lf"
   }
 }
