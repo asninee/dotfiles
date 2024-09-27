@@ -3,32 +3,23 @@
   "workbench.colorTheme": "Vesper",
   "workbench.iconTheme": "chalice-icon-theme",
   "workbench.productIconTheme": "icons-carbon",
-
   // fonts
   "editor.fontFamily": "Iosevka Fixed SS18",
   "editor.fontLigatures": true,
-  "window.zoomLevel": -1.2,
   "editor.fontSize": 14,
   "terminal.integrated.fontFamily": "Iosevka Term SS18",
   "terminal.integrated.fontSize": 14,
-
   // formatting + linting
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "astro": "html",
-    "postcss": "css"
+    "css": "tailwindcss"
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
-  },
-  "[csharp]": {
-    "editor.defaultFormatter": "csharpier.csharpier-vscode"
-  },
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit",
     "source.fixAll.eslint": "explicit",
@@ -50,8 +41,18 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "prettier.arrowParens": "avoid",
+  "prettier.documentSelectors": [
+    "**/*.astro"
+  ],
   "eslint.options": {
-    "extensions": [".js", ".jsx", ".mdx", ".ts", ".tsx", ".astro"]
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".mdx",
+      ".ts",
+      ".tsx",
+      ".astro"
+    ]
   },
   "eslint.validate": [
     "html",
@@ -62,8 +63,7 @@
     "javascriptreact",
     "typescriptreact"
   ],
-
-  // ui
+  "window.zoomLevel": -2,
   "breadcrumbs.enabled": false,
   "window.commandCenter": false,
   "window.density.editorTabHeight": "compact",
@@ -72,7 +72,6 @@
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.activityBar.location": "top",
-
   // excluded files
   "files.exclude": {
     "**/.git": true,
@@ -81,23 +80,20 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "**/.vscode": true,
-    "**/pnpm-lock.yaml": true,
-    "**/bun.lockb": true
+    "**/.vscode": true
   },
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
     "**/*.code-search": true,
-    "pnpm-lock.yaml": true
+    "pnpm-lock.yaml": true,
+    "package-lock.json": true
   },
-
   // file associations
   "files.associations": {
     "*.css": "tailwindcss",
     ".env*": "dotenv"
   },
-
   // editor
   "editor.stickyScroll.enabled": true,
   "editor.overviewRulerBorder": false,
@@ -121,29 +117,27 @@
   "editor.scrollbar.vertical": "hidden",
   "editor.hideCursorInOverviewRuler": true,
   "security.workspace.trust.untrustedFiles": "open",
-
   // terminal
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.env.osx": {},
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.shellIntegration.enabled": false,
-
   // git
   "git.openRepositoryInParentFolders": "always",
   "git.autofetch": true,
   "git.confirmNoVerifyCommit": false,
   "git.confirmSync": false,
-
   // extensions
   "console-ninja.toolsToEnableSupportAutomaticallyFor": {
     "live-preview-extension": true
   },
   "console-ninja.featureSet": "Community",
   "dotenv.enableAutocloaking": false,
-  "gitlens.codeLens.scopes": ["document", "containers"],
+  "gitlens.codeLens.scopes": [
+    "document",
+    "containers"
+  ],
   "console-ninja.showWhatsNew": false,
-  "quokka.showStartViewOnFeatureRelease": false,
-
   // npm
-  "npm.packageManager": "auto"
+  "npm.packageManager": "auto",
 }
