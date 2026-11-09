@@ -1,0 +1,20 @@
+[user]
+	name = asninee
+	email = nine96as@proton.me
+	signingkey = ~/.ssh/id_ed25519.pub
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[pull]
+	rebase = false
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = zed --wait
+[commit]
+	template = ~/.gitmessage
+	gpgsign = true
+[gpg]
+	format = ssh
+[alias]
+	lg = log --oneline --graph

@@ -1,11 +1,29 @@
 {
+  "cli_default_open_behavior": "new_window",
+  "disable_ai": true,
+  "title_bar": {
+    "show_menus": false,
+    "show_user_menu": true,
+    "show_user_picture": true
+  },
+  "cursor_shape": "underline",
+  "status_bar": {
+    "cursor_position_button": false
+  },
+  "global_lsp_settings": {
+    "button": false
+  },
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "subtle"
+  },
   "base_keymap": "VSCode",
   "theme": "Vesper",
   // fonts
-  "ui_font_family": "Helvetica Neue",
-  "ui_font_size": 14,
-  "buffer_font_family": "Iosevka Term SS18",
-  "buffer_font_size": 12,
+  "ui_font_family": ".SystemUIFont",
+  "ui_font_size": 11,
+  "buffer_font_family": "Iosevka SS18",
+  "buffer_font_size": 10,
   "buffer_line_height": {
     "custom": 1.5
   },
@@ -13,29 +31,51 @@
     "ss01": true
   },
   // ui
-  "features": {
-    "copilot": false
-  },
   "toolbar": {
+    "breadcrumbs": false,
     "quick_actions": false
   },
   "project_panel": {
-    "indent_size": 10
+    // "folder_icons": false,
+    // "file_icons": false,
+    "dock": "left",
+    "default_width": 200,
+    "entry_spacing": "standard",
+    "indent_size": 5,
+    "auto_fold_dirs": false,
+    "indent_guides": {
+      "show": "never"
+    }
+  },
+  "outline_panel": {
+    "dock": "left",
+    "button": false,
+    "default_width": 200
   },
   "collaboration_panel": {
+    "dock": "left",
     "button": false
   },
-  "chat_panel": {
+  "git_panel": {
+    "dock": "left",
+    "default_width": 200
+  },
+  "agent": {
+    "dock": "right",
+    "default_width": 300,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.5"
+    },
     "button": false
   },
-  "notification_panel": {
-    "button": false
-  },
-  "assistant": {
-    "version": "1",
-    "button": false
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false
   },
   "tabs": {
+    "show_close_button": "hidden",
+    "file_icons": false,
     "git_status": true
   },
   "scrollbar": {
@@ -43,6 +83,8 @@
   },
   // terminal
   "terminal": {
+    "button": false,
+    "cursor_shape": "underline",
     "default_height": 200,
     "line_height": {
       "custom": 1.2
@@ -51,16 +93,21 @@
   // formatting
   "tab_size": 2,
   "prettier": {
-    "printWidth": 80,
     "tabWidth": 2,
     "useTabs": false,
     "semi": false,
     "singleQuote": true,
+    "jsxSingleQuote": true,
     "trailingComma": "all",
     "bracketSpacing": true,
     "jsxBracketSameLine": false,
     "arrowParens": "avoid",
     "proseWrap": "preserve",
-    "endOfLine": "lf"
+    "endOfLine": "auto"
+  },
+  // privacy
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
   }
 }
